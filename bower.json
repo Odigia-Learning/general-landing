@@ -1,0 +1,19 @@
+{
+  "name": "Odigia-General-Landing",
+  "version": "1",
+  "authors": [
+    "Jordan Cauley <jordan@cauley.co>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/dependencies",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

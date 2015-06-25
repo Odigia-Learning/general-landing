@@ -1,0 +1,13 @@
+{
+  "name": "odigia-general-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "harp compile",
+    "deploy": "npm run compile && surge ./www odigia.surge.sh"
+  },
+  "author": "",
+  "license": "ISC"
+}
