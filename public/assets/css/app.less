@@ -248,13 +248,53 @@ PRICING STYLES
   border: 2px solid darken(@brand-primary, 10%);
 }
 
-.modal-body{
+a:focus, a:active{
+  outline: thin dotted;
+  outline: 0 auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.form-success {
+  border: 1px solid @white;
+  padding: 20px;
+  color: @white;
+  font-size: 18px;
+}
+.odigia-modal-body{
+  padding: 0 30px 15px;
+  p{
+    text-align: center;
+  }
   .front-end-errors{
     padding: 15px;
     margin-bottom: 20px;
     color: darken(@brand-primary, 10%);
     border: 2px solid darken(@brand-primary, 10%);
   }
+  .odigia-form-group{
+    width: 100%;
+  }
+  .odigia-btn{
+    display: block;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-success {
+    border: 1px solid darken(@brand-primary, 10%);
+    padding: 20px;
+    color: darken(@brand-primary, 10%);
+    font-size: 18px;
+  }
+}
+
+.modal-header{
+  border-bottom: 0;
+}
+
+.modal-title{
+  color: @brand-primary;
+  text-align: center;
 }
 
 .error{
@@ -263,8 +303,9 @@ PRICING STYLES
 
 .checkbox{
   position: relative;
-  height: 120px;
+  height: 100px;
   width: 100%;
+  margin-left: 25%;
 }
 
 .checkboxes{
