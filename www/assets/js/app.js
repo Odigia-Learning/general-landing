@@ -165,6 +165,18 @@
               }
               if(res){
                 console.log(res);
+
+                console.log(form);
+                var parent = form.parentElement,
+                    success = document.createElement('div'),
+                    successText = document.createTextNode('Thank you, your submission was successful');
+
+                    success.className = 'form-success';
+                    success.appendChild(successText);
+                    parent.removeChild(form);
+                    parent.appendChild(success);
+
+
               }
             });
           }
