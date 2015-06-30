@@ -130,7 +130,15 @@
     callback(null, params);
   };
 
-
+  oo.urlParams = function(callback){
+    var params = {}, hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++){
+      hash = hashes[i].split('=');
+      params[hash[0]] = hash[1];
+    }
+    return callback(params);
+  };
 
   oo.imageLoader = function(imgs){
     for(var i = 0, x = imgs.length; i < x; i++){
@@ -140,14 +148,23 @@
     }
   };
 
-  console.log(oo.ifJS());
-
   var images = document.getElementsByTagName('img');
 
   if(images && (images.length > 0)){
     oo.imageLoader(images)
   };
 
+  oo.ifJS()
+
+  oo.urlParams(function(params){
+    if(params){
+      console.log(params);
+      var nameFields = document.getElementsByClassName('firstname-lastname');
+      for(var i = 0, x = nameFields.length; i < x; i++){
+        nameFields[i].value = params.fname + ' ' + params.lname;
+      }
+    }
+  });
 
   $('form').on('submit', function( event ) {
     event.preventDefault();
