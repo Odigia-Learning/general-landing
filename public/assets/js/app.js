@@ -15,7 +15,6 @@
       url: url,
       data: data
     }).done(function( msg ) {
-      console.log( "Data Saved: " + msg );
       return callback(null, msg);
     });
 
@@ -158,7 +157,6 @@
 
   oo.urlParams(function(params){
     if(params){
-      console.log(params);
       var nameFields = document.getElementsByClassName('firstname-lastname');
       for(var i = 0, x = nameFields.length; i < x; i++){
         nameFields[i].value = params.fname + ' ' + params.lname;
@@ -181,9 +179,7 @@
 
               }
               if(res){
-                console.log(res);
 
-                console.log(form);
                 var parent = form.parentElement,
                     success = document.createElement('div'),
                     successText = document.createTextNode('Thank you, your submission was successful');
